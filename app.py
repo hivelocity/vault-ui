@@ -6,12 +6,13 @@ import werkzeug.exceptions
 import os
 
 
-
 app = Flask(__name__)
 Material(app)
 app.config.from_pyfile('settings.py',silent=True)
 if "VAULT_ADDR" in os.environ:
     app.config['VAULT_URL'] = os.environ['VAULT_ADDR']
+else:
+    app.config['VAULT_URL'] = "https://mantl-control-02.node.consul:8200"
 if "VAULT_SKIP_VERIFY" in os.environ:
     app.config['VAULT_SKIP_VERIFY'] = True
 
