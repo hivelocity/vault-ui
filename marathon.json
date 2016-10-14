@@ -1,0 +1,32 @@
+{
+  "id": "/vaultui",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 500,
+  "disk": 500,
+  "instances": 1,
+  "ports": [
+    0
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "registry.stacklocity.net:5000/apps/vaultui",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": true
+    }
+  },
+  "uris": [
+    "file:///etc/docker.tar.gz"
+  ]
+}
