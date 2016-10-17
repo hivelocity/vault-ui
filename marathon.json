@@ -29,6 +29,10 @@
       "forcePullImage": true
     }
   },
+  "env": {
+    "VAULT_ADDR": "https://mantl-control-02.node.consul:8200",
+    "VAULT_SKIP_VERIFY": "True"
+  },
   "uris": [
     "file:///etc/docker.tar.gz"
   ]
